@@ -21,3 +21,8 @@ env/
 
 # Logs
 *.log 
+
+#Datos
+data/raw/
+data/processed
+
