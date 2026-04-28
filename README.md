@@ -22,18 +22,18 @@ Este proyecto immplementa un pipeline de datos completo que:
 - Git / GitHub
 
 # Estructura del Proyecto
-ETL-Accidentes-Bogota/
-├── config/          # Variables de entorno (credenciales)
-├── src/
-│   ├── extract.py   # Extracción desde API
-│   ├── transform.py # Limpieza y transformación
-│   └── load.py      # Carga a SQL Server
-├── sql/             # Scripts de base de datos
-├── scripts/         # Automatización PowerShell
-├── data/
-│   ├── raw/         # Datos crudos (ignorado por git)
-│   └── processed/   # Datos limpios (ignorado por git)
-└── requirements.txt
+
+| Carpeta / Archivo | Descripción |
+|---|---|
+| `config/.env` | Credenciales seguras — nunca sube a GitHub |
+| `src/extract.py` | Extracción paginada desde API REST |
+| `src/transform.py` | Limpieza y normalización de datos |
+| `src/load.py` | Carga a SQL Server mediante pyodbc |
+| `sql/create_tables.sql` | Modelo relacional con índices optimizados |
+| `scripts/run_etl.ps1` | Automatización del pipeline en PowerShell |
+| `data/raw/` | Datos crudos en JSON — ignorado por git |
+| `data/processed/` | Datos limpios en CSV — ignorado por git |
+| `requirements.txt` | Dependencias del proyecto |
 
 ## Instalación
 
